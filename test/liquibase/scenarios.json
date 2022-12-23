@@ -1,0 +1,11 @@
+{
+    "install_mongodb_driver": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "features": {
+            "ghcr.io/devcontainers/features/java:1": {},
+            "liquibase": {
+                "installMongoDriver": true
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": "liquibase",
+    "version" : "1.0.0",
+    "name": "Liquibase",
+    "documentationUrl": "https://docs.liquibase.com",
+    "description": "Install the Liquibase.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Liquibase version"
+        },
+        "installMongoDriver": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install Mongodb Driver"
+        }
+    },
+    "containerEnv": {
+        "LIQUIBASE_DIR": "/usr/local/liquibase",
+        "PATH": "/usr/local/liquibase:${PATH}"
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/java:latest"
+    ]
+}
